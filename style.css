@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    background: #000000;
+    place-items: center;
+    font-family: 'Nunito', sans-serif;
+    text-decoration-color: #ffffff;
+    color: #ffffff; 
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head__section img {
+    display: block;
+    margin: 0 auto;
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.head__section p,
+.head__section h1,
+.video__section p,
+.video__section h2 {
+    text-align: center; 
+}
+
+.dragon_section,
+.car_section,
+.bmw_section {
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px;
+    padding-left: 80px;
+    padding-top: 20px;
+}
+
+.dragon_section .dragon_video,
+.car_section .car_video,
+.bmw_section .bmw_video {
+    overflow: hidden;
+}
+
+.dragon_section .dragon_video video,
+.car_section .car_video video,
+.bmw_section .bmw_video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.suggestion_section {
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+}
+
+form {
+    max-width: 1170px;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .dragon_section .dragon_text {
+        padding: 0;
+    }
+    .car_section .car_text {
+        padding-left: 0;
+    }
+    .bmw_section .bmw_text {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dragon_section,
+    .car_section,
+    .bmw_section {
+        width: 90%;
+        grid-template-columns: 1fr;
+        padding-left: 20px; 
+    }
+}
